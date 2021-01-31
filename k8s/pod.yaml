@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: bitslab-goserver
+  labels:
+    name: bitslab-goserver
+spec:
+  containers:
+  - name: bitslab-goserver
+    image: bitsevil/bitslab:latest
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - containerPort: 5001
