@@ -6,4 +6,4 @@ def index():
     return '10 bilhões por cento de certeza!!!\n'
 
 if __name__ == '__main__':
-    app.run(host='127.0.0.1', port=5000)
+    app.run(host='127.0.0.1', port=8001)
