@@ -1,12 +1,12 @@
 ## ReplicaSet
 
-Responsável por ditar as regras de um ou mais pods que irão compartilhar das 
-mesmas diretrizes de execução. 
+Responsável por ditar as regras de um ou mais pods que irão compartilhar das
+mesmas diretrizes de execução.
 E quando ocorrer algum problema com algum dos pods, o replicaset atua para
 disponibilizar aquele recurso novamente.
 
 Para aplicar uma replicaset
-`kubectl apply -f config/replicaset.yaml`
+`kubectl apply -f k8s/replicaset.yaml`
 
 Para obter mais informações
 `kubectl get replicasets`

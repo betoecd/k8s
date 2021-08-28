@@ -2,7 +2,7 @@
 
 Pods são as menores unidades dentro do k8s, onde os containers serão executados.
 O recomendável, é utilizar arquivos `.yaml` por são declarativos e podem ser
-executados em qualquer ambiente e o kubernetes conseguirá aplicar todas as 
+executados em qualquer ambiente e o kubernetes conseguirá aplicar todas as
 configuraçẽos.
 
 As comunicações dentro do kubernetes são realizadas através de uma api, assim
@@ -10,7 +10,7 @@ sendo, cada recurso pode possuir uma versão diferente, nesses casos a documenta
 sempre ajudará.
 
 Para aplicar um arquivo `.yaml`
-`kubeclt aplly -f config/pod.yaml`
+`kubeclt aplly -f k8s/pod.yaml`
 
 Vericando o novo pod criado
 `kubectl get pods`

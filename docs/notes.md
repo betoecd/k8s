@@ -26,7 +26,7 @@ Para deletar um cluster:
 Parâmetros extras para criar um cluster:
  - --config=[FILE]
  - --name=[CLUSTER-NAME]
-`kind create cluster --config=config/kind.yaml --name=bits`
+`kind create cluster --config=k8s/kind.yaml --name=bits`
 
 Para recuperar informações de todos os clusters configurados no `~/.kube/config`
 `kubectl config get-clusters`
