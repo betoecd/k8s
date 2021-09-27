@@ -1,9 +1,9 @@
 ## Pods
 
 Pods são as menores unidades dentro do k8s, onde os containers serão executados.
-O recomendável, é utilizar arquivos `.yaml` por são declarativos e podem ser
+O recomendável, é utilizar arquivos `.yaml` por serem declarativos e podem ser
 executados em qualquer ambiente e o kubernetes conseguirá aplicar todas as
-configuraçẽos.
+configurações.
 
 As comunicações dentro do kubernetes são realizadas através de uma api, assim
 sendo, cada recurso pode possuir uma versão diferente, nesses casos a documentação
