@@ -22,6 +22,20 @@ spec:
       containers:
         - name: goserver
           image: bitsevil/hello-go
+          envFrom:
+            - configMapRef:
+                name: goserver-env
+          # env:
+          #   - name: NAME
+          #     valueFrom:
+          #       configMapKeyRef:
+          #         name: goserver-env
+          #         key: NAME
+          #   - name: AGE
+          #     valueFrom:
+          #       configMapKeyRef:
+          #         name: goserver-env
+          #         key: AGE
           resources:
             limits:
               memory: "128Mi"
