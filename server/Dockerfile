@@ -1,7 +1,7 @@
-FROM golang:1.17
+FROM golang:latest
 
 WORKDIR /opt/server
 
-COPY . .
+COPY server .
 RUN go build -o server .
 CMD [ "./server" ]

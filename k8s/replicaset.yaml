@@ -21,6 +21,6 @@ spec:
     spec:
       containers:
         - name: goserver
-          image: bitsevil/hello-go
+          image: betoecd/hello-go
           # ports:
           #   - containerPort: <Port>

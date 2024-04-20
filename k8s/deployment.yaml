@@ -21,10 +21,42 @@ spec:
     spec:
       containers:
         - name: goserver
-          image: bitsevil/hello-go
+          image: betoecd/hello-go
+
+          startupProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            periodSeconds: 3
+            failureThreshold: 30
+
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 3
+            periodSeconds: 3
+            failureThreshold: 1
+
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 3
+            periodSeconds: 3
+            timeoutSeconds: 1
+            failureThreshold: 3
+            successThreshold: 1
+
           envFrom:
             - configMapRef:
                 name: goserver-env
+            - secretRef:
+                name: goserver-secret
+
+          volumeMounts:
+            - mountPath: /config
+              name: config
           # env:
           #   - name: NAME
           #     valueFrom:
@@ -42,3 +74,13 @@ spec:
               cpu: "500m"
           # ports:
           #   - containerPort: <Port>
+
+      volumes:
+        - name: config
+          configMap:
+            name: goserver-env
+            items:
+              - key: NAME
+                path: NAME
+              - key: AGE
+                path: AGE
